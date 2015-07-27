@@ -100,7 +100,7 @@ function ($timeout, $parse, $http, $compile, $q, $templateCache, EventEmitter) {
             },
 
             createElementByClone: function () {
-                this.element = this.mainElement.dndCloneByStyles().dndCss('position', 'static');
+                this.element = this.mainElement.clone().dndCss('position', 'static');
                 this._offset = Point(this.mainElement.dndClientRect()).minus(this.api.getBorderedAxis());
                 this.ready = true;
 
